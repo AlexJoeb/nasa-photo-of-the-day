@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-export default function Card({ data }) {
+export default function Card({ api, data }) {
     const size = 25;
+    if(!data) return <h1>Loading... </h1>;
     return (
         <div className='card'>
             <CardHeader title={data.title} />
@@ -13,6 +15,7 @@ export default function Card({ data }) {
 
 function CardHeader({ title }){
     const size = 25;
+    if(!title) return <h1>Loading... </h1>;
     return (
         <div className='card_header'>
             <svg height={size} width={size} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -32,6 +35,7 @@ function CardImage({ url }) {
 }
 
 function CardBottom({ explanation }){
+    if(!explanation) return <h1>Loading... </h1>;
     return (
         <div className='card_bottom'>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;{explanation}</p>
