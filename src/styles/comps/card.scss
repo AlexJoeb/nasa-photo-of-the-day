@@ -1,0 +1,46 @@
+.card {
+    @include flex($dir: column);
+
+    width: 80vw;
+    max-width: 600px;
+
+    box-shadow: rgba(darken($black, 20%), .6) 0 0 20px;
+
+    &_header {
+        height: 40px;
+        background: $blue;
+        color: $white;
+
+        padding: 0 20px;
+
+        @include flex {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        svg + h1 {
+            margin-left: 10px;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: fs(small);
+        }
+    }
+
+    &_middle {
+        height: 400px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &_bottom {
+        height: auto;
+        padding: 20px 1vw;
+        background: $blue;
+
+        text-align: left;
+        color:$white;
+    }
+}
