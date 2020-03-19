@@ -2,7 +2,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import Flatpickr from "react-flatpickr";
 
-export default function DateModule({ date, setDate }) {
+export default function DateModule({ date, updateDate }) {
     return (
         <div className="picker">
             <h1 className='picker-heading'>Have a different day in mind?</h1>
@@ -15,7 +15,7 @@ export default function DateModule({ date, setDate }) {
                 }}
                 onChange={(e) => {
                     console.log("date changed")
-                    return setDate(new Date(e[0]));
+                    updateDate(new Date(e[0]));
                 }}
             />
         </div>
