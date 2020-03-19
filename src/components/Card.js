@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import styled from 'styled-components';
 
 export default function Card({ api, data }) {
-    const size = 25;
     if(!data) return <h1>Loading... </h1>;
     return (
         <div className='card'>
             <CardHeader title={data.title} />
-            <CardImage url={data.url} />
-            <CardBottom explanation={data.explanation} />
+            <StyledCardImage className='card_middle' url={data.url} />
+            <StyledCardBottom className="card_bottom" explanation={data.explanation} />
         </div>
     )
 }
@@ -29,16 +28,30 @@ function CardHeader({ title }){
     )
 }
 
-function CardImage({ url }) {
+function CardImage({ className, url }) {
     if(!url) return <h1>Loading...</h1>;
-    return <div className='card_middle' style={{backgroundImage: `url(${url})`}}></div>;
+    return <div className={className}></div>;
 }
+const StyledCardImage = styled(CardImage)`
+    height: 400px;
+    background: url(${props => props.url || ""}) center center no-repeat;
+    background-size: cover;
+`;
 
-function CardBottom({ explanation }){
+function CardBottom({ className, explanation }){
     if(!explanation) return <h1>Loading... </h1>;
     return (
-        <div className='card_bottom'>
+        <div className={className}>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;{explanation}</p>
         </div>
     )
 }
+
+const StyledCardBottom = styled(CardBottom)`
+    height: auto;
+    padding: 20px 1vw;
+    background: #4962BE;
+
+    text-align: left;
+    color:white;
+`;

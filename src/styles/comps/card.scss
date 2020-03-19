@@ -27,20 +27,4 @@
             font-size: fs(small);
         }
     }
-
-    &_middle {
-        height: 400px;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-
-    &_bottom {
-        height: auto;
-        padding: 20px 1vw;
-        background: $blue;
-
-        text-align: left;
-        color:$white;
-    }
 }
