@@ -51,7 +51,5 @@ const StyledCardBottom = styled(CardBottom)`
     height: auto;
     padding: 20px 1vw;
     background: #4962BE;
-
     text-align: left;
-    color:white;
 `;

@@ -13,3 +13,8 @@ body {
 
     background: $black;
 }
+
+.flatpickr-day.selected {
+    background: $blue !important;
+    border-color: lighten($blue, 10%) !important;
+}

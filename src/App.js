@@ -6,7 +6,7 @@ import Card from './components/Card';
 import DateModule from './components/DateModule';
 
 import "./styles/index.scss";
-import "flatpickr/dist/themes/material_green.css";
+import "flatpickr/dist/themes/dark.css";
 
 import "./App.css";
 

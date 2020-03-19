@@ -26,5 +26,13 @@
             font-weight: bold;
             font-size: fs(small);
         }
+
+        svg path {
+            fill: $white;
+        }
+    }
+
+    &_bottom {
+        color: $white;
     }
 }
