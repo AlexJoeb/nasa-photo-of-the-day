@@ -1,0 +1,17 @@
+.picker {
+    margin-top: 20px;
+    
+    @include flex{
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    h1{
+        font-size: fs(large);
+        color:$white;
+    }
+
+    input:active, input:focus {
+        outline: none;
+    }
+}
